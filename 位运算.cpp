@@ -20,19 +20,15 @@ using namespace std;
 
 #define lowbit(x) ((x) & (-x))
 
+//2. n & (n - 1)将整数n的最后一位为1的位变为0， 也可以判断n是否为2的幂
 
+//求二进制中1的个数
 
-
-
-
-
-int main() {
-    int n;
-    cin >> n;
-    for (int i = 0; i < n; i++) {
-        cin >> a[i] << endl;
+int onecount(int n) {
+    int count = 0;
+    while (n) {
+        n = n & (n - 1);
+        count++;
     }
-
-
-    return 0;
+    return count;
 }
