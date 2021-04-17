@@ -32,3 +32,34 @@ int onecount(int n) {
     }
     return count;
 }
+
+//判断一个数是不是2的幂
+int func(int n) {
+    return n & (n - 1);
+}
+//判断一个数是不是4的幂
+int func2(int n) {
+    if (n & (n - 1)) {
+        return (n & 0x55555555);
+    }
+}
+
+//判断int变量n是奇数还是偶数
+
+a & 1 = 0 //奇数
+a & 1 = 1 //偶数
+
+
+//利用二进制进行枚举子集
+
+
+
+for (int i = 0; i < (1 << n); i++) {
+    for (itn j = 0; j < n; j++) {
+        if (i & (1 << j)) {
+            cout << a[j] << " ";
+        }
+    }
+    cout << endl;
+}
+
