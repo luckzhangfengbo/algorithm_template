@@ -15,7 +15,7 @@
 using namespace std;
 
 int qpow(long long a, long long b) {
-    long long ans = 0, base = a; 
+    long long ans = 1, base = a; 
     while (b > 0) {
         if (b & 1) {
             ans *= base;
