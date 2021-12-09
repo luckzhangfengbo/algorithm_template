@@ -27,6 +27,17 @@ int qpow(long long a, long long b) {
 }
 // a^b % m
 
+int qpow2(long long a, long long b, long long m) {
+    long long ans = 1, base = a % m;
+    while (b > 0) {
+        if (b & 1) {
+            ans = ans * base % m;
+        }
+        base = base * base % m;
+        b >>= 1;
+    } 
+    return ans % m;
+}
 
 
 int main() {
